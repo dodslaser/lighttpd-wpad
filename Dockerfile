@@ -6,4 +6,6 @@ RUN apk add --update lighttpd bash \
  mkdir -p /var/cache/lighttpd/compress/ \
  && chown -R lighttpd /var/cache/lighttpd/compress/
 
+COPY lighttpd.conf /etc/lighttpd/lighttpd.conf
+
 CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
