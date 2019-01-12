@@ -1,5 +1,5 @@
-FROM armhf/alpine:3.4
-MAINTAINER docker@intrepid.de
+FROM alpine:latest
+MAINTAINER dodslaser
 
 RUN apk add --update lighttpd bash \
  && rm -rf /var/cache/apk/* && \
